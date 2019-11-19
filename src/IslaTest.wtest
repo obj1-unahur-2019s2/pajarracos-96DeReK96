@@ -1,0 +1,31 @@
+import algunasAves.*
+import islas.*
+describe "aves" {
+	var aguiColo = new AguiluchoColorado()
+	var albatro = new Albatro()
+	var palomaTorcaza = new PalomaTorcaza()
+	
+	var isla = new Isla()
+	
+	fixture {
+		albatro.irAlGimnasio()
+		isla.agregarAve(aguiColo)
+		isla.agregarAve(albatro)
+		isla.agregarAve(palomaTorcaza)
+	}
+	
+	
+	test "agui colo" {
+		assert.equals(580, aguiColo.fuerza())
+	}
+	test "albatro" {
+		assert.equals(1100, albatro.fuerza())
+	}
+	test "paloma" {
+		assert.equals(700, palomaTorcaza.fuerza())
+	}
+	
+	// verificacion 2
+	
+	
+}
